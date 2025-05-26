@@ -1,0 +1,20 @@
+# macOS 시스템 파일
+.DS_Store
+
+# Obsidian 개인 설정 폴더
+.obsidian/
+
+# VS Code 설정 폴더
+.vscode/
+
+# node.js 프로젝트라면
+node_modules/
+
+# 테스트 캐시 
+coverage/
+*.log
+
+# 기타 백업/임시 파일
+*.swp
+*.swo
+*~
