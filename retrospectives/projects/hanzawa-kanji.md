@@ -1,3 +1,20 @@
+---
+title: 일본 상용 한자 학습 앱 개발 회고 (Hanzawa-Kanji)
+date: 2025-05-13
+tags:
+  - project
+  - hanzawa-kanji
+  - react
+  - kotlin
+  - architecture
+  - optimization
+  - dto
+  - repository
+  - design-pattern
+summary: React와 Kotlin을 기반으로 한 한자 학습 앱을 개발하며 성능 최적화, 레이어드 아키텍처, 비즈니스 로직 분리에 집중한 프로젝트 회고
+draft: false
+---
+
 # 일본 상용 한자 학습 앱
 
 ## 프로젝트 요약

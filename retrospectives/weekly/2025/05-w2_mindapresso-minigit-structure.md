@@ -1,5 +1,18 @@
-# 5월 2주차
-
+---
+title: mindapresso & mini-git 구조 설계 회고
+date: 2025-05-12
+tags:
+  - weekly
+  - retrospective
+  - project-design
+  - nextjs
+  - git-internals
+  - architecture
+  - structure
+  - planning
+summary: 클린 아키텍처 리팩토링부터 블로그/CLI 프로젝트의 구조 설계 고민과 인사이트를 중심으로 돌아본 주간 회고
+draft: false
+---
 `기간` `2025-05-04` ~ `2025-05-11`
 
 ## 이번 주에 한 일

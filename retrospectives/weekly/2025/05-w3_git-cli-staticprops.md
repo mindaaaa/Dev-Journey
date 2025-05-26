@@ -1,4 +1,21 @@
-# 5월 3주차
+---
+title: mini-git CLI 구현과 mindapresso 정적 페이지 설계
+date: 2025-05-22
+tags:
+  - weekly
+  - retrospective
+  - cli
+  - git
+  - nextjs
+  - getStaticProps
+  - gray-matter
+  - jest
+  - fs
+  - path
+  - project-design
+summary: CLI 환경에서 Git 원리를 구현하고, Next.js 기반 블로그 프로젝트에서 정적 데이터 흐름을 이해하며 구조 중심 사고를 강화한 한 주
+draft: false
+---
 
 `기간` `2025-05-12` ~ `2025-05-20`
 
