@@ -34,17 +34,17 @@ _Last updated: 2025-06-02_
 >압축 방식과 해시 결과가 일치하는지 확인한다.
 
 
-![객체 디렉토리](blob_02.png)
+![객체 디렉토리](./images/blob_02.png)
 
 #### 실험 ①: 동일 파일 Git에 저장
-![Git 해시 출력](hash_02.png)
+![Git 해시 출력](./images/hash_02.png)
 
 - Git은 빈 파일에도 `"blob 0\0"` 형태의 헤더를 붙여 SHA-1 해시를 계산한다.
 - `.git/objects/e6/9de2...` 경로에 **zlib 압축된 바이너리 객체**가 저장된다.
 
 #### 실험 ②:  mini-git으로 동일 파일 저장
 
-![mini-Git 해시 저장](hash_03.png)
+![mini-Git 해시 저장](./images/hash_03.png)
 
 ```bash
 $ mini-git add objects.txt
@@ -78,8 +78,8 @@ const store = Buffer.concat([headerBuffer, buffer]);
 
 ### 객체 저장 위치 예시
 
-![Git 저장 경로](path_01.png)
-![mini-git 저장 경로](path_02.png)
+![Git 저장 경로](./images/path_01.png)
+![mini-git 저장 경로](./images/path_02.png)
 - 동일한 해시로 Git과 mini-git 모두 `objects/e6/9de2...` 위치에 객체를 저장한다.
 
 ---
@@ -95,14 +95,14 @@ const store = Buffer.concat([headerBuffer, buffer]);
 
 #### 실험 ①: Git에서 `add` 후 index 내용 확인
 
-![Git index](index_02.png)
+![Git index](./images/index_02.png)
 - Git은 `.git/index`에 바이너리 포맷으로 다음 정보를 저장한다.
     - 권한 (100644 등)
     - 스테이징 순서
     - blob 해시
     - 파일 경로
 - index는 바이너리 형식이므로 직접 열면 깨지며, 전용 파서(`cat-file -p`)로 확인해야 한다.
-![git index 바이너리](index_03.png)
+![git index 바이너리](./images/index_03.png)
 #### 실험 ②: mini-git에서 동일 파일 `add`
 ##### index 구조 비교
 
@@ -111,7 +111,7 @@ $ mini-git add file.txt
 # 내부적으로 createBlobObject → writeGitObject → addFileToIndex 실행
 ```
 
-![mini-git index 구조](index_04.png)
+![mini-git index 구조](./images/index_04.png)
 
 | 키     | 값              |
 | ----- | -------------- |
@@ -191,11 +191,11 @@ $ mini-git branch dev
 ```
 - `.mini-git/HEAD` 파일에는 `ref: refs/heads/main`이 저장된다.
 - `.mini-git/refs/heads/dev` 파일이 생성되며, 현재 커밋 해시가 기록된다.
-![branch 동작](branch_01.png)
+![branch 동작](./images/branch_01.png)
 
 - Git과 동일한 브랜치 참조 구조를 따르며,
 - 최초 커밋이 없는 경우에는 `fatal: HEAD가 가리키는 브랜치가 존재하지 않습니다`와 같은 오류를 출력한다.
-![branch_error](error_01.png)
+![branch_error](./images/error_01.png)
 ### 포인터 구성 비교
 |항목|Git|mini-git|비고|
 |---|---|---|---|
@@ -214,10 +214,11 @@ $ mini-git branch dev
 
 ### 저장 예시
 #### Git HEAD
-![Git_HEAD](head_02.png)
+![Git_HEAD](./images/head_02.png)
 
 #### mini-git HEAD
-![mini-git HEAD](head_03.png)
+![mini-git HEAD](./images/head_03.png)
+
 ---
 
 ## 4. Commit 포맷 비교
@@ -232,7 +233,7 @@ $ mini-git branch dev
 
 ### 실험 ①: Git 커밋 객체 포맷 확인
 
-![Git commit](commit_02.png)
+![Git commit](./images/commit_02.png)
 커밋 객체 내부에는 다음과 같은 요소가 포함된다:
 
 - **tree**: 현재 상태를 나타내는 트리 객체 해시
@@ -242,7 +243,7 @@ $ mini-git branch dev
 
 ### 실험 ②: mini-git 커밋 객체 포맷 확인
 
-![mini-git commit](commit_03.png)
+![mini-git commit](./images/commit_03.png)
 ```javascript
 const commitContent = `tree ${treeHash}
 ${parent ? `parent ${parent}\n` : ''}
@@ -290,7 +291,7 @@ ${message}
 
 ### 실험 ①: Git에서 브랜치 전환
 
-![checkout](checkout_01.png)
+![checkout](./images/checkout_01.png)
 - `.git/HEAD` 내용이 `ref: refs/heads/dev`로 변경된다.
 - 워킹 디렉토리의 파일이 해당 브랜치의 최종 커밋 상태로 변경된다.
 - `.git/index`도 해당 커밋 시점의 index로 업데이트된다.
