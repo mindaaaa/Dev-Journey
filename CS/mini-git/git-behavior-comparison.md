@@ -7,10 +7,12 @@ tags:
   - 구조비교
   - 학습프로젝트
 category: git
-description: Git과 mini-git의 add, commit, checkout 명령 수행 시 저장 방식과 참조 구조를 단계별로 비교하고 시각화한 학습 기반 실험 기록입니다.
+description: Git과 mini-git의 add, commit, checkout 명령 수행 시 저장 방식과 참조 구조를 단계별로 비교하고 시각화한 학습 기반 실험 기록 문서
 draft: false
 ---
-# 🧪 Git Behavior Comparison
+# Git Behavior Comparison
+
+_Last updated: 2025-06-02_  
 
 > 이 문서는 Git과 mini-git이 유사한 명령어(`add`, `commit`, `checkout` 등)를 수행할 때  
 > **내부적으로 어떤 구조를 공유하고, 어떤 부분이 단순화되었는지**를 비교하는 실험 기반 기록이다.  
@@ -351,4 +353,3 @@ HEAD → refs/heads/dev → 커밋 해시
 
 > 브랜치 전환은 단순히 HEAD 포인터를 다른 브랜치로 바꾸는 작업이다.
 
-_Last updated: 2025-06-02_  

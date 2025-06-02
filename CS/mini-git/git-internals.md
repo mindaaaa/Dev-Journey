@@ -1,7 +1,16 @@
 ---
 title: Git Internals – Git 내부 구조와 핵심 객체 이해
-date: 2025-05-07
-tags: [git, internals, snapshot, blob, tree, commit, head, refs, version-control]
+date: 2025-06-02
+tags:
+  - git
+  - internals
+  - snapshot
+  - blob
+  - tree
+  - commit
+  - head
+  - refs
+  - version-control
 category: git
 description: Git의 내부 저장 구조와 핵심 객체(blob, tree, commit 등), HEAD, index, refs 등의 역할과 구성 원리를 정리한 문서
 draft: false
@@ -622,17 +631,7 @@ console.log(`${mode} ${name} ${hash}`);
 - Git과 동일한 `blob`, `tree`, `commit` 구조 재현
 - 각 객체는 zlib 압축되어 바이너리 처리되었으므로 직접 확인 불가
 - `catFile()` 함수는 Git처럼 압축을 해제하고 객체 유형에 맞게 출력 처리
-##### 명령어 시나리오 
-- *2025_06_02 기준*
-```bash
-$ node src/index.js init
-$ node src/index.js add hello.txt
-$ node src/index.js commit "first commit"
-$ node src/index.js branch dev
-$ node src/index.js checkout dev
-$ node src/index.js log
-$ node src/index.js cat-file -p <SHA-1 해시>
-```
+
 ---
 
 # 해시와 무결성

@@ -1,13 +1,22 @@
 ---
 title: Git 구조 단순화 설계 노트
 date: 2025-06-02
-tags: [Git, mini-git, Internals, 설계, 구조비교, CLI]
+tags:
+  - Git
+  - mini-git
+  - Internals
+  - 설계
+  - 구조비교
+  - CLI
 category: git
-description: Git의 복잡한 내부 구조를 학습 목적에 맞게 단순화하여 설계한 mini-git 구현 방식과 그 선택 이유를 설명합니다.
+description: Git의 복잡한 내부 구조를 학습 목적에 맞게 단순화하여 설계한 mini-git 구현 방식과 그 선택 이유를 설명하는 문서
 draft: false
 ---
 # mini-git 구조의 단순화 설계 노트 
 
+_Last updated: 2025-06-02_ 
+
+---
 ## 1. 설계 목표
 
 > 이 프로젝트는 Git을 무작정 사용하는 것을 넘어서,  
