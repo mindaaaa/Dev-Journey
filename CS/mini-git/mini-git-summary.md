@@ -83,7 +83,6 @@ _Last updated: 2025-05-25_
 
 ![HEAD](head_01.png)
 → 현재 `main` 브랜치를 가리키고 있음<br>→ 이때, `git checkout`으로 브랜치를 바꾸면 `HEAD` 포인터 이동
-
 ### 2. `.git/refs/`
 
 - **Git이 어떤 커밋 해시를 참조하고 있는지**를 저장하는 구조
